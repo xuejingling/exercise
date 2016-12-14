@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#nav{
+				width: 270px;
+				height: 260px;border: 1px solid #1C94C4;
+				position: relative;
+			}
+			.bt{
+				background: #AAAAAA;
+				width:90px;
+				height: ;
+				text-align: center;
+				line-height: 30px;
+				border-bottom: 1px solid #1C94C4;
+			}
+			.one{
+				position: absolute;
+				left: 0px;
+				top: 0px;
+			}
+			.two{
+				position: absolute;
+				left: 90px;
+				top: 0px;
+			}
+			.three{
+				position: absolute;
+				top:0px;
+				left: 180px;
+			}
+			ul{
+				list-style: none;
+			}
+			.content{
+				width: 200px;
+				height: 160px;
+				position: absolute;
+				left: 60px;
+				top: 30px;
+				display: none;
+			}
+			.active{
+				background: #fff;
+				border-bottom: 1px solid #FFFFFF;
+				font-weight: bold;
+			}
+		</style>
+		<script src="js/jquery-1.11.2.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$(".one").addClass("active");
+				$(".bt").each(function(index)
+					{
+						$(this).mouseover(function(){   //可以换成click
+							$(this).addClass("active").next(".content").show()
+							.end().siblings().removeClass("active").next(".content").hide();
+						});
+					}
+			);
+			
+ 			});
+		</script>
+	</head>
+	<body>
+		<div id="nav">
+			<div class="bt one">
+				新闻
+			</div>
+			<div class="content" style="display: block;">
+				<ul>
+					<li>新闻</li>
+					<li>新闻</li>
+					<li>新闻</li>
+					<li>新闻</li>
+					<li>新闻</li>
+					<li>新闻</li>
+				</ul>
+			</div>
+			<div class="bt two">
+				军事
+			</div>
+			<div class="content">
+				<ul>
+					<li>军事</li>
+					<li>军事</li>
+					<li>军事</li>
+					<li>军事</li>
+					<li>军事</li>
+					<li>军事</li>
+				</ul>
+			</div>
+			<div class="bt three">
+				娱乐
+			</div>
+			<div class="content">
+				<ul>
+					<li>娱乐</li>
+					<li>娱乐</li>
+					<li>娱乐</li>
+					<li>娱乐</li>
+					<li>娱乐</li>
+					<li>娱乐</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>

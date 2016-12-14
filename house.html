@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#mycanvas{
+				border: 1px solid #1C94C4;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="mycanvas" width="300" height="300"></canvas>
+	</body>
+	<script type="text/javascript">
+		var c=document.getElementById("mycanvas");
+		var h=c.getContext("2d");
+		h.lineWidth="1";
+		h.fillStyle="#00FF00";
+		h.strokeStyle="#AAAAAA";
+		h.beginPath();
+		h.moveTo(0,150);
+		h.lineTo(300,150);
+		h.lineTo(150,50);
+		h.lineTo(0,150);
+		h.fill();
+		h.stroke();
+		h.closePath();
+		
+		h.beginPath();
+		h.fillStyle="#F6A828";
+		h.moveTo(50,150);
+		h.lineTo(50,300);
+		h.lineTo(250,300);
+		h.lineTo(250,150);
+		h.lineTo(50,150);
+		h.fill();
+		h.stroke();
+		h.closePath();
+		
+		h.beginPath();
+		h.fillStyle="bisque";
+		h.moveTo(200,83);
+		h.lineTo(200,20);
+		h.lineTo(230,20);
+		h.lineTo(230,103);
+		//h.lineTo(200,82);
+		h.fill();
+		h.stroke();
+		h.closePath();
+		
+		h.beginPath();
+		h.fillStyle="azure";
+		h.moveTo(80,160);
+		h.lineTo(80,220);
+		h.lineTo(140,220);
+		h.lineTo(140,160);
+		h.lineTo(80,160);
+		h.fill();
+		h.stroke();
+		h.closePath();
+		
+		h.beginPath();
+		h.fillStyle="azure";
+		h.moveTo(80,190);
+		h.lineTo(140,190);
+		h.fill();
+		h.stroke();
+		h.closePath();
+		
+		h.beginPath();
+		h.fillStyle="azure";
+		h.moveTo(110,160);
+		h.lineTo(110,220);
+		h.fill();
+		h.stroke();
+		h.closePath();
+		
+		h.beginPath();
+		h.fillStyle="azure";
+		h.moveTo(200,190);
+		h.lineTo(200,300);
+		h.lineTo(250,300);
+		h.lineTo(250,190);
+		h.lineTo(200,190);
+		h.fill();
+		h.stroke();
+		h.closePath();
+		
+		h.beginPath();
+		h.fillStyle="#CCCCCC";
+		h.arc(240,240,5,0,360);
+		h.fill();
+		h.stroke();
+		h.closePath();
+	</script>
+</html>

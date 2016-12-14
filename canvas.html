@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#mycanvas{
+			  border:1px  solid #0f0;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var c=document.getElementById("mycanvas");
+				var context=c.getContext("2d");
+				context.save();
+				context.fillStyle="#00FF00";
+				context.strokeStyle="#E78F08";
+				context.lineWidth=4
+				//正方形
+				context.beginPath();
+				
+				context.moveTo(30,30);
+				context.lineTo(250,30);
+				context.lineTo(250,250);
+				context.lineTo(30,250);
+				context.lineTo(30,30);
+				context.fill();
+				context.stroke();
+				context.closePath();
+				//五角星
+				context.translate(40,20);
+				context.beginPath();
+				context.moveTo(20,80);
+				context.lineTo(100,80);
+				context.lineTo(40,120);
+				context.lineTo(60,60);
+				context.lineTo(80,120);
+				context.lineTo(20,80);
+				context.fill();
+				context.stroke();
+				context.closePath();
+				//画一张图片
+				    var canvas=document.getElementById("mycanvas");
+					var context=canvas.getContext("2d");
+					var img1=new Image();
+					img1.src="img/c4_r.gif";
+					img1.onload=function(){
+						context.drawImage(img1,30,30);
+						//图片上画文字
+						context.fillStyle="#FBCB09";
+						context.font="15px Arial";
+						context.textAlign="start";
+						context.fillText("雪花飘飘",150,60)
+					}					
+				
+			}
+			
+		</script>
+	</head>
+	<body>
+		<canvas id="mycanvas" width="400px" height="600px">
+		
+		</canvas>
+	</body>
+</html>
